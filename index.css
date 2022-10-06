@@ -1,0 +1,870 @@
+.first {
+    width: 600px;
+    margin: 300px auto;
+    background-color: #eee;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    border-left: 10px solid red;
+    border-right: 10px solid purple;
+}
+
+.first:first-letter {
+    color: red;
+}
+
+.first::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 10px;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient(to right,
+            red 20%,
+            blue 20%,
+            blue 40%,
+            green 40%,
+            green 60%,
+            pink 60%,
+            pink 80%,
+            purple 80%);
+
+
+}
+
+.first::after {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+    background-image: linear-gradient(to right,
+            red 20%,
+            blue 20%,
+            blue 40%,
+            green 40%,
+            green 60%,
+            pink 60%,
+            pink 80%,
+            purple 80%);
+
+
+}
+
+.two {
+    width: 600px;
+    margin: 300px auto;
+
+}
+
+input {
+    background-color: #eee;
+    position: relative;
+    width: 600px;
+    padding: 10px;
+    caret-color: red;
+    border: none;
+    height: 30px;
+}
+
+.txt1 {
+    position: relative;
+    width: 600px;
+    padding: 10px;
+    caret-color: red;
+
+}
+
+.txt1::after {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 3px;
+    bottom: 8px;
+    left: 10px;
+    background-image: linear-gradient(to right, red 50%, green 50%);
+}
+
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 300px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto;
+    gap: 20px 10px;
+
+}
+
+.grid div {
+    background-color: rgb(54, 67, 91);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.layout {
+     height: 100vh;
+    display: grid;
+    background-color: #ddd;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+     " head head head head head head head head head head"
+    "sect sect sect sect sect sect sect side side side " 
+    " foot foot foot foot foot foot foot foot foot foot";
+}
+
+.head {
+    grid-area: head;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+}
+
+.sec {
+    grid-area: sect;
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+
+}
+
+.side {
+    grid-area: side;
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+
+}
+
+.foot {
+    grid-area: foot;
+    background-color: aqua;
+    color: white;
+    padding: 10px;
+
+}
+.grid1 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 300px auto;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto ;
+    gap: 20px 20px;
+}
+.grid1 div {
+    background-color: rgb(16, 19, 19);
+    color :white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid2 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "eight eight eight eight eight eight eight eight eight eight"
+   
+    "second second second second second second second second third third"
+    " four four five five five five five five five five"
+    " six six five five five five five five five five "
+    " seven seven five five five five five five five five"
+    "  one one one one one one one one one one  ";
+    gap:10px 10px;
+    margin: 300px auto;
+}
+.grid2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.one {
+    grid-area: one;
+    background-color: cornflowerblue;
+}
+.second {
+    grid-area: second;
+    background-color: cornflowerblue;
+}
+.third {
+    grid-area: third;
+    background-color: cornflowerblue;
+}
+.fourth{
+    grid-area: four;
+    background-color: cornflowerblue;
+
+}
+.fif {
+    grid-area: five;
+    background-color: cornflowerblue;
+}
+.si {
+    grid-area: six;
+    background-color: cornflowerblue;
+}
+.sev {
+    grid-area: seven;
+    background-color: cornflowerblue;
+}
+.eig{
+    grid-area: eight;
+    background-color: cornflowerblue;
+}
+.grid3 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 300px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 10px 10px;
+    align-content: space-between;
+    
+}
+.grid3 div {
+    background-color: rgb(150, 4, 55);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.parent {
+    background-color: #ddd;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:30% 60% 10%;
+    grid-template-areas: 
+    "ch1 ch1 ch1 ch1 ch1 ch1 ch2 ch2 ch2 ch3 ch3 ch3"
+    "ch4 ch4 ch4 ch5 ch5 ch5 ch5 ch5 ch5 ch3 ch3 ch3"
+    "ch4 ch4 ch4 ch6 ch6 ch6 ch6 ch6 ch6 ch3 ch3 ch3"
+    "ch7 ch7 ch7 ch8 ch8 ch8 ch9 ch9 ch9 ch10 ch10 ch10";
+    gap: 10px 10px;
+}
+ .ch1  {
+    background-color: white;
+    color: black;
+    grid-area: ch1;
+    border-bottom: 2px solid red;
+
+}
+.ch2{
+    background-color: white;
+    color: black;
+    grid-area: ch2;
+    border-bottom: 2px solid red;
+
+} .ch3 {
+    background-color: black;
+    color: white;
+    grid-area: ch3;
+    border-bottom: 2px solid red;
+
+} .ch4 {
+    background-color: white;
+    color: black;
+    grid-area: ch4;
+    border-bottom: 2px solid red;
+
+} .ch5 {
+    background-color: white;
+    color: black;
+    grid-area: ch5;
+    border-bottom: 2px solid red;
+
+} .ch6 {
+    background-color: white;
+    color: black;
+    grid-area: ch6;
+    border-bottom: 2px solid red;
+
+} .ch7 {
+    background-color: white;
+    color: black;
+    grid-area: ch7;
+    border-bottom: 2px solid red;
+
+} .ch8 {
+    background-color: black;
+    color: white;
+    grid-area: ch8;
+    border-bottom: 2px solid red;
+
+} .ch9 {
+    background-color: white;
+    color: black;
+    grid-area: ch9;
+    border-bottom:2px solid red;
+
+} .ch10 {
+    background-color: white;
+    color: black;
+    grid-area: ch10;
+    border-bottom:2px solid red;
+
+}
+.one-1 {
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2e75f4;
+    font-size: 40px;
+     position: relative;
+     margin-top: 50%;
+}
+.one-1::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #2e75f4;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+.one-1::after{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(240, 17, 55);
+    transform: rotate(5deg);
+    z-index: -2;
+}
+.one-5 {
+    /* width: 200px;
+    height: 200px;
+    margin-left: 25%;
+     position: relative; */
+     width: 200px;
+     height: 200px;
+     margin: 100px auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 100px ;
+     background-color: #ddd;
+     color: #2e75f4;
+     font-size: 40px;
+     position: relative;
+}
+
+.one-5::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 115px;
+    border: 10px solid;
+    border-color:  rgb(240, 17, 55)  rgb(240, 17, 55)  rgb(240, 17, 55) transparent;
+   
+}
+.one-5::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 115px;
+    border: 10px solid;
+    border-color: #2e75f4 transparent  #2e75f4 #2e75f4 ;
+   
+}
+.one-3 {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px ;
+    background-color: #ddd;
+    color: #2e75f4;
+    font-size: 40px;
+    position: relative;
+}
+.one-3::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 115px;
+    border: 10px solid;
+    border-color:  rgb(240, 17, 55)  rgb(240, 17, 55)  rgb(240, 17, 55) transparent;
+   transition: .5s;
+}
+.one-3::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 115px;
+    border: 10px solid;
+    border-color: #2e75f4 transparent  #2e75f4 #2e75f4 ;
+   transition: .5s;
+   transition-delay: .5s;
+}
+.one-3:hover::before{
+transform: rotate(1turn);
+}
+.one-3:hover::after{
+    transform: rotate(1turn);
+    }
+    .one-2{
+        width: 150px;
+        margin: 80px auto;
+        background-color: orangered;
+        color: white;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+    }
+    .one-2::after{
+        content: "";
+        position: absolute;
+        width: 190px;
+        height:100% ;
+        background-color: orangered;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        transform: skew(-10deg,-10deg);
+    }
+    .one-2::before{
+        content: "";
+        position: absolute;
+        width: 190px;
+        height:100% ;
+        background-color: orangered;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transform: skew(10deg,10deg);
+    }
+    .one-4{
+        width: 150px;
+        margin: 80px auto;
+        background-color: rgb(9, 156, 107);
+        color: white;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+      
+    }
+    .one-4::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height:100% ;
+        background-color:  rgb(9, 156, 107);
+        z-index: -1;
+        top: 0;
+        left: -15px;
+        transform: skew(20deg);
+    }
+    .one-4::after{
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        background-color: rgb(9, 156, 107);
+        top: -1px;
+        left: -66px;
+        transform: skew(20deg);
+      }
+    
+        /* .class {
+            matrix(3, 0.2679, 0, 3, 20, 100);
+            scalex=3
+          skewy=0.2679
+            skewx=0
+            scaley=3
+            traslatex=20
+            translatey=100
+          } */
+   .one-6{
+    background-color: cadetblue;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    border-bottom: 5px solid black;
+    margin-top: 250px;
+   }
+   .one-6::after{
+    content: "Elzero";
+    color: white;
+    font-size: 25px;
+    left: 15px;
+    bottom: 5px;
+    
+    position: absolute;
+   }
+   .one-6::before{
+    content: "";
+position: absolute;
+width: 73%;
+height: 69%;
+border-right: 5px solid white;
+border-bottom: 5px solid white;
+transform: rotate(45deg);
+bottom: 123px;
+left: 25px;
+background-color: black;
+
+   }
+   .one-7{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+   }
+   .one-7::before{
+    content: "Front";
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+    background-color: rgb(240, 17, 55)  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .one-7::after{
+content: "Back";
+color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+    background-color:#2e75f4  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+   }
+   .one-7:hover{
+transform: rotateY(180deg);
+   }
+   @keyframes change-color{
+0%{
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+   }
+   .three-1{
+    width: 50px;
+    height: 50px;
+    margin: 25px auto;
+    margin-left: 50%;
+    animation-name: change-color;
+    animation-duration: 1s;
+    position: relative;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 5px solid ;
+    border-color:  #2e75f4  #2e75f4  #2e75f4 transparent;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+   }
+   .three-1::before{
+    content: "";
+    position: absolute;
+    width: 126%;
+    height: 122%;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: rgb(240, 17, 55) transparent rgb(240, 17, 55) rgb(240, 17, 55) ;
+    right: -11px;
+    top: -11px;
+  }
+  .three-1::after{
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 77px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: palevioletred palevioletred transparent palevioletred;
+    right: -17px;
+    top: -18px;
+  }
+  
+   .three-1:hover{
+    animation: none;
+   }
+   .three-2{
+    width: 50px;
+    height: 50px;
+    margin: 25px auto;
+    margin-left: 50%;
+   
+    position: relative;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 5px solid ;
+    border-color:  #2e75f4 transparent  #2e75f4  #2e75f4 ;
+animation-duration: 10s;
+   }
+   .three-2::before{
+    content: "";
+    position: absolute;
+    width: 126%;
+    height: 122%;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: rgb(240, 17, 55) transparent  rgb(240, 17, 55) rgb(240, 17, 55)  ;
+    right: -11px;
+    top: -11px;
+    animation-duration: 5s;
+  }
+  .three-2::after{
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 77px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: black transparent black  black ;
+    right: -17px;
+    top: -18px;
+    animation-duration: 5s;
+  }
+  
+   .three-2:hover,.three-2:hover::before,.three-2:hover::after{
+   
+    animation-name: change-color;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+animation-iteration-count: infinite;
+   }
+   span{
+    width: 50px;
+    height: 50px;
+    margin: 25px auto;
+    margin-left: 50%;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    display: block;
+    animation-name: change-color;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+   }
+  .task div.main.red {
+    color: red;
+  }
+.pa > div:nth-child(2){
+    color: red;
+}
+ .task2 .assign > div:only-child{
+    color: red;
+}
+.task3 .assign-2 > div[title]:not(.no-need){
+    color: red;
+}
+.task4 div:nth-child(2) div{
+    color: red;
+}
+.task5 div:not(.no-need) div:nth-last-of-type(2){
+    color: red;
+}
+.task6 div:first-child div:nth-child(5){
+    color: red;
+}
+.task7 :not(:first-child,:last-child,h3)  {
+    color: red;
+}
+@media print {
+    .assign-one{
+    font-size: 40px;
+}
+}
+.assign-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.assign-two div {
+background-color: #ddd;
+width: 200px;
+padding: 5px 10px;
+margin-bottom: 10px;
+text-align: center;
+border: 1px solid #eee;
+}
+.assign-two div h1{
+    color: #2e75f4;
+}
+@media (min-width:300px) and (max-width:500px){
+    .assign-two div{
+        width:calc(100%-10px) ;
+    }
+    .assign-two div h1{
+        color: black;
+    }
+}
+@media (min-width:600px){
+    .assign-two div{
+        width:calc(50%-10px) ;
+    }
+    .assign-two div h1{
+        color: red;
+    }
+}
+@media (min-width:900px){
+    .assign-two div{
+        width:calc(25%-10px) ;
+    }
+    .assign-two div h1{
+        color: olivedrab;
+    }}
+    .assign-three{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+.assign-three div{
+    background-color: #ddd;
+width: 200px;
+padding: 5px 10px;
+margin-bottom: 10px;
+text-align: center;
+border: 1px solid #eee;
+}
+.assign-three div h1{
+    color: #2e75f4;
+}
+@media (min-width:300px) and (max-width:500px){
+    .assign-three div{
+        width:calc(100%-10px) ;
+    }
+    .assign-three div h1{
+        color: black;
+    }
+}
+@media (min-width:600px){
+    .assign-three div{
+        width:calc(50%-10px) ;
+    }
+    .assign-three div h1{
+        color: red;
+    }
+}
+.assign-three .ones,
+.assign-three .fours {
+    width: 100%
+}
+.assign-three .twos,
+.assign-three .threes{
+    width: calc(25%-10px);
+}
+.center.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,50%);
+
+}
+.circle-100{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.circle-200{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.arrow{
+    width: 300px;
+
+    padding: 20px;
+    margin: 55px auto;
+    position: relative;
+    background-color: #ddd;
+}
+.top::before{
+content: "";
+position: absolute;
+border: 15px solid;
+border-color: transparent;
+border-bottom-color: #ddd;
+left: 50%;
+top: -28px;;
+
+}
+.bottom::after{
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent;
+    border-top-color: #ddd;
+    left: 50%;
+    bottom: -29px;
+    
+    }
+    .left::before{
+        content: "";
+        position: absolute;
+        border: 15px solid;
+        border-color: transparent;
+        border-right-color: #ddd;
+        left: -29px;
+        top: 15px;
+        
+        }
+        .right::after{
+            content: "";
+            position: absolute;
+            border: 15px solid;
+            border-color: transparent;
+            border-left-color: #ddd;
+            right: -29px;
+            top: 15px;
+          
+            
+            }
